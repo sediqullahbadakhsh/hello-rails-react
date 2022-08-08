@@ -1,4 +1,5 @@
 import React from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../redux/configureStore";
@@ -9,8 +10,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Provider store={store}>
           <Routes>
-            <Route path="/" element={<h1> Welcome </h1>} />
-            <Route path="/greeting" element={<Greeting />} />
+            <Route path="/" element={<Greeting />} />
           </Routes>
         </Provider>
       </BrowserRouter>
@@ -18,7 +18,4 @@ class App extends React.Component {
   }
 }
 
-App.propTypes = {
-  message: PropTypes.string,
-};
 export default App;
