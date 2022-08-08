@@ -1,7 +1,6 @@
 class GreetingsController < ApplicationController
-  def index 
+  def index
     greeting = Greeting.find(rand(1..5))
-    render json: greeting, only:[:message]   
-
-  end 
+    render json: greeting, only: [:message]
+  end
 end
